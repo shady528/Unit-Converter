@@ -1,0 +1,197 @@
+body{
+    background-color: rgb(51, 47, 47)
+}
+
+
+/* Navbar */
+.outer-icon{
+    color:white;
+    font-size: 50px;
+    margin-left:60px;
+    padding-top: 10px;
+}
+.sidebar{
+    min-height:100vh;
+    width:50px;
+    background-color: rgb(10, 10, 10);
+    transition: all 0.3s;
+    overflow: hidden;
+    position: fixed;
+}
+.sidebar:hover{
+    width:200px;
+    overflow: visible;
+}
+nav{
+    min-height: 200px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+nav ul li button{
+    cursor: pointer;
+    width:195px;
+    text-decoration: none;
+    display: flex;
+    border:none;
+    background: none;
+    align-items: center;
+    color:white;
+    margin:0px 10px 0px -39px;
+}
+nav ul li button:hover{
+    background-color: rgb(51, 47, 47);
+    border-left:5px solid blue;
+    /* text-size */
+}
+nav ul li button i{
+    color: white;
+    width: 50px;
+    margin:0px 0px 0px -5px;
+}
+
+
+
+/* Home */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border:4px solid transparent; 
+    margin-left: 60px;
+    height:100%;
+    text-align: center;
+}
+.title{
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.2s;
+    color: white;
+    text-shadow: 5px 5px black;
+}
+.title:hover{
+    letter-spacing: 3px;
+}
+.convert{
+    display: flex;
+    justify-content: space-around;
+}
+.convert button{
+    height:30px;
+    background-color: rgb(24, 22, 22);
+    border:1px solid white;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    color:white
+}
+.convert button:disabled, convert button[disabled]{
+    cursor: not-allowed;
+    background-color: rgb(48, 48, 48);
+}
+.con
+.convert button:hover{
+    background-color: rgb(119, 120, 121);
+}
+.from i,.to i{
+    padding:1px;
+}
+/* To remove up down buttons from input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ans,.from input{
+    border: 3px solid white;
+    width: 175px;
+    background-color: rgb(24, 22, 22);;
+    border:1px solid white;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    color:white
+}
+
+.dropdownFrom{
+    margin-left: 180px;
+    position: absolute;
+    display:none;
+}
+.btnFrom:hover + .dropdownFrom{
+    display:flex;
+    flex-direction: column;
+}
+.dropdownFrom:hover {
+    display:flex;
+    flex-direction: column;
+}
+.dropdownTo{
+    margin-left: 176px;
+    margin-top: 30px;
+    position: absolute;
+    display:none;
+}
+.btnTo:hover + .dropdownTo{
+    display:flex;
+    flex-direction: column;
+}
+.dropdownTo:hover {
+    display:flex;
+    flex-direction: column;
+}
+
+.btn{
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 9px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(114, 114, 103);
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .convert{
+        flex-direction: column;
+    }
+    .to{
+        margin:auto;
+    }
+  }
+
+
+  .about{
+    color:white;
+    max-width: 75%;
+  }
+  .buttons{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+
+  }
+  .buttons button{
+color:white;
+background-color: rgb(114, 114, 103);
+margin: 10px;
+border: 2px solid white;
+border-radius: 5px;
+  }
+
+@media only screen and (max-width:375px){
+    .title{
+        font-size: 1.7rem;
+    }
+    .ans,.from input{
+        width:120px;
+    }
+}
